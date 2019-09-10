@@ -1,4 +1,4 @@
 name: Joban Aulakh
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-- jekyll-sitemap
+plugins: - jekyll-sitemap
