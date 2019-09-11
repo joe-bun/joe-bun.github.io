@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<!--  Author: Jobanpreet Singh Aulakh, 000381413 --> 
+
+<html>
+	<head>
+		<title>
+			City Recycle Information
+		</title>
+		
+	<style type="text/css">
+		body{
+			padding-right: 15em;
+			padding-left: 15em;
+		}
+		nav {
+			background-color: #fbefb3;
+			line-height:200%;
+			
+		}
+		nav li{
+			color:#14ab3f;
+			display: inline;
+			list-style-type: none;
+			padding-right: 50px;
+			font-weight:bold;		
+		}
+		ul.bb{
+			list-style-image: url(images/recycle_sm.jpg);
+			line-height:2.5em;
+		}
+		.center{
+			text-align: center;
+		}
+		header img{
+			vertical-align: middle;
+			}
+		header{
+			margin-top:0em;
+			color: #14ab3f;
+			font-size:2em;
+			}
+		h1,h2,h3{
+			color: #14ab3f;
+			}
+		nav a:hover{
+			color:#ec834a;
+			text-decoration:underline;
+			}
+		nav a:active{
+			color:black;
+			text-decoration:underline;
+			}
+		
+		nav a{
+			color: #14ab3f;
+			text-decoration:none;
+		}
+		a{
+			text-decoration:none;
+		}
+		ul.abc{
+			list-style-type:upper-alpha;
+		}
+		ul{
+			list-style-type:square;
+		}
+			ul.address{
+			font-weight:bold;
+			text-align:center;
+			list-style-type:none;
+		}
+		.fi{
+			text-decoration:underline; 
+			font-style:italic;
+		}
+		footer{
+			margin-bottom:5em;
+		}
+	</style>
+	</head>
+	
+	<body>
+		<header class="center">
+			<img src="images/recycle_logo.jpg" alt="images/recycle_logo.jpg"/>Recycle
+		</header>
+		
+		<nav>
+			<ul>
+				<li><a href="#" title="Recycle">Recycle</a></li>
+				<li><a href="#" title="Energy Saving Tips">Energy Saving Tips</a></li>
+				<li><a href="#" title="Waste Locations">Waste Locations</a></li>
+				<li><a href="#" title="Contact Us">Contact Us</a></li>
+			</ul>
+		</nav>
+		
+		<p>
+			Recycling is good for the environment. <span style="color:#ec834a">Our city has one of the best recycling programs in the world!</span> You can pick up another blue box at City Hall. Bulk items can also be picked up on your regular garbage collection day.
+		</p>
+
+		<h1>
+			What goes in a blue box?
+		</h1>
+
+		<p>
+			Put the following items in a blue box:
+		</p>
+	
+		<ul class="bb">
+			<li>Cardboard (fold or break into small pieces)</li>
+			<li>Plastic bottles</li>
+			<li>Glass jars</li>
+			<li>Paper</li>
+			<li>Plastic bags</li>
+			<li>Tin foil</li>
+		</ul>
+
+		<h2>
+			Recycling Tips
+		</h2>
+
+		<p>
+			Get into the habit of recycling, and it will become second nature. Here are some tips that will help you:
+		</p>
+
+		<ul>
+			<li>Bottles, cans and jars:
+			<ul class="abc">
+				<li>All bottles, cans and jars must be empty.</li>
+				<li><span style="text-decoration:underline; font-style:italic">Take the lids off all bottles, cans and jars and rinse them.</span></li>
+				<li>Throw all metals lids into the blue box.</li>
+			</ul>
+			</li>
+			<li>Throw plastic lids that bend easily into the blue box.</li>
+			<li>Leaf and yard waste can be placed in paper bags. You can also use yard waste to make compost for your garden. <a href="http://www.compost.org/English/ENGLISH_INDEX.htm">How to make compost</a></li>
+			<li>Green bins can be used for kitchen waste.</li>
+		</ul>
+
+		<h2>
+			Community Recycling Centers
+		</h2>
+
+		<p>
+			Community Recycling Centers will accept good used clothing, furniture and household items for their on-site stores. Instead of calling for a bulk pickup, take used items to the Community Recycling Centers!
+		</p>
+
+		<ul>
+			<li>Northwest Community Recycling Center
+			<ul>
+				<li>Tuesdays: 10 am - 1 pm</li>
+				<li>Fridays: 10 am - 5 pm</li>
+				<li><span class="fi">First Saturday of each month only: 9 am - 12 pm</span></li>
+			</ul>
+			</li>
+			<li>Southeast Community Recycling Center
+			<ul>
+				<li>Mondays: 10 am - 2 pm</li>
+				<li>Thursdays: 10 am - 12 pm</li>
+			</ul>
+			</li>
+		</ul>
+
+		<h2>
+			Large Item Pickup
+		</h2>
+
+		<p>
+			Large items can be picked up by the city garbage collection service. Please contact us directly for a to arrange a pickup time.
+		</p>
+
+		<h3 class="center">
+			Contact Information
+		</h3>
+
+		<ul class="address">
+			<li>Amritsar</li>
+			<li>P.O. Box 3567</li>
+			<li>Amritsar, ON</li>
+			<li>L8T 4N1</li>
+		</ul>
+
+		<footer class="center">
+			Image credit: http://lesserevillife.com/wp-content/uploads/2013/04/recycle_glass_cans_plastic.png
+		</footer>
+
+	</body>
+</html>

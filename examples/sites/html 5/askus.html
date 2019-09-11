@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--  Author: Jobanpreet Singh Aulakh, 000381413 --> 
+
+<html>
+	<head>
+		<title>
+			Cycling Tours
+		</title>
+		
+	<link rel="stylesheet" type="text/css" href="cyclestyles.css"/>
+	<style type="text/css">
+		fieldset{
+			border: 2px solid  #888888;
+			background-color:#ffe5b4;
+			margin-bottom:20px;
+			display:block;
+		}
+		form{
+			margin-top:20px;
+			margin-bottom:15px;
+			border: 2px solid  #888888;
+			padding:10px;
+			width:80%;
+		}
+		label{
+			font-family: Arial, sans-serif;
+			display:inline;
+		}
+		legend{
+			color:#888888;
+		}
+		section label{
+			padding-right:20px;
+		}
+		textarea, .button{
+				background-color:#ffffe6;
+				}
+		nav{
+			height:1000px;
+			}
+		
+	</style>
+	
+	</head>
+
+<body>
+	<img class="Banner-top" src="./images/bicycle_axle_sm.jpg" alt="Bicycle Axle"/>
+	<div class="main">
+		<header>
+			<img class="Banner" src="./images/bicyclebanner.jpg" alt="Cycling Tours"/><a class="Title" >Cycling Tours</a>
+		</header>	
+		<nav>
+				<ul>
+					<li><a href="./aboutus.html" title="About Us">About Us</a></li>
+					<li><a href="./askus.html" title="Ask Us">Ask Us</a></li>
+					<li><a href="#" title="Destinations">Destinations</a></li>
+					<li><a href="#" title="FAQ">FAQ</a></li>
+					<li><a href="#" title="Reviews">Reviews</a></li>
+					<li><a href="./seminars.html" title="Seminars">Seminars</a></li>
+					<li><a href="#" title="Trip Prep">Trip Prep</a></li>
+				</ul>
+		</nav>
+	
+	
+	<section>
+	<h1>Ask Us</h1>
+	<form id = "askus" name = "askus" method = "post" action = "https://csunix.mohawkcollege.ca/tooltime/showit.pl" >
+    
+	<fieldset><legend>Request Information About Seminars</legend>
+     
+
+      <label for = "Subject">Subject</label>
+		  <select name = "subject" id = "subject">
+			<option value = "Info">General Information</option>
+			<option value = "Repair" selected = "selected">Bicycle Repairs</option>
+			<option value = "Packing">Packing</option>
+			<option value = "Documents">Travel Documents</option>
+			<option value = "Other">Other</option>
+		  </select>
+		  <br>
+      <label for = "Message">Message<br></label>
+	  <textarea name = "Message" class="Message" rows="5" cols="60" >
+ 
+	  </textarea>
+    </fieldset>
+	 
+ 
+    
+    <fieldset><legend>I would like more information: (check all that apply)</legend>
+
+      
+        <input  type = "checkbox" name = "addtomailinglist" id = "addtomailinglist" 
+           value = "addtomailinglist" checked ="checked" />
+        <label for = "addtomailinglist">Please add me to the mailing list<br></label>
+     
+      
+      
+     
+        <input type = "checkbox" name = "pleasephoneme" id = "pleasephoneme" value = "pleasephoneme" />
+        <label for = "pleasephoneme">Pleae phone me.<br></label>
+     
+      
+      
+        <input type = "checkbox" name = "volunteer" id = "volunteer" value = "volunteer" />
+        <label for = "volunteer">I'd like to volunteer to help with seminars.<br></label>
+      
+      
+    </fieldset>
+	   <fieldset><legend>Please choose your preffered seminar times:</legend>
+
+      
+        <input type = "radio" name = "prefferedtime" id = "Morning" value = "Morning" />
+        <label for = "Morning">Morning</label>
+		
+        <input type = "radio" name = "prefferedtime" id = "Afternoon" value = "Afternoon" checked = "checked" />
+        <label for = "Afternoon">Afternoon</label> 
+
+		<input type = "radio" name = "prefferedtime" id = "Evening" value = "Evening" />
+        <label for = "Evening">Evening</label> 
+		<br>
+		<label for = "othertime">If other time, please specify</label>
+		<input type = "text" name = "othertime" id="othertime" rows="1" cols="60" />
+		</textarea>
+
+	  
+		</fieldset>
+
+	<fieldset><legend>Contact Information</legend>
+
+      <label for = "firstname">First Name</label>
+      <input type = "text"  name = "firstname" id = "firstname" class = "text" maxlength="20" />
+		<br>
+      <label for = "lastname">Last Name</label>
+      <input  type = "text"   name = "lastname" id = "lastname" class = "text" maxlength="20" />
+	  <br>
+	  <label for = "phonenumber" >Phone Number</label>
+      <input type = "phonenumber"  name = "phonenumber" id = "phonenumber" 
+      size = "12" maxlength="12" class = "text" placeholder = "123-456-7890" />
+		<br>
+      <label for = "emailaddress" >Email Address</label>
+      <input type = "email"  name = "emailaddress" id = "emailaddress" 
+      size = "40" maxlength="40" class = "text" placeholder = "name@example.com" />
+    </fieldset>
+    
+    
+    
+   
+      <input type = "submit" value = "SEND INFORMATION" class = "button" />
+      <input type = "reset" value = "Cancel" class = "button" />
+	  <input type = "hidden" value = "Seminar Inquiry" name = "formname" />
+  
+    
+  </form>
+  <img src="./images/Untitled.png"/>
+		
+	</section>
+	<footer>
+		<ul>
+			<li>Cycling Tours*P.O.Box 4455*Brantford,ON*N#T 2J0</li>
+			<li>Image credit:http://www.bikelink.com/images/banner01.jpg</li>
+		</ul>
+	</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "ca.mohawkcollege.accelerometerDemo2013"  version = "0.0.5">
+    <name>Accelerometer Demo 2013</name>
+
+    <description>
+       A sample PhoneGap 2013 application  
+    </description>
+
+    <author href="http://www.mohawkcollege.ca" email="YourNameHere@mohawkcollege.ca">
+        CO10133  Demo Accelerometer App 2013
+    </author>
+
+    <gap:platform name="android" /> 
+
+    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="false" />
+	<preference name="android-installLocation" value="auto" />
+	<preference name="splash-screen-duration" value="1000"/>
+
+     
+</widget>

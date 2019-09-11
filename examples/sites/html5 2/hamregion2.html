@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+
+            body{
+                margin-left: 30%;
+                margin-right: 30%;
+                text-align: center;
+
+            }
+            h1{
+                color: orange;
+            }
+            h2,p{
+                color: blue;
+            }
+            div#myImage {position: relative;padding: 0px; width: 494px;height:494px; 	background:url('img/hamilton.png')  ;	}
+            div#myImage canvas {position: absolute;left: 0px;top: 0px;opacity: .75; }
+            div#myImage img {position: absolute; left: 0px;top: 0px;	width: 494px;height: 494px;padding: 0px;border: 0px none;opacity: 0;} 
+        </style>
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h1>The Cities of Hamilton Region</h1>
+        <div id='content'>
+            <map name="Map" id="Map">
+                <area alt="Flamborough" id="Flamborough" title="Flamborough" href="#" shape="poly" coords="190,72,288,166,280,178,275,177,260,196,251,200,250,208,243,211,242,219,228,220,196,236,193,241,98,262,72,176,105,168,96,127,164,111,162,100" />
+                <area alt="Ancaster" id="Ancaster" title="Ancaster" href="#" shape="poly" coords="99,264,98,270,230,334,254,262,250,259,250,242,243,243,242,235,239,234,228,240,223,240,218,241,215,235,198,240" />
+                <area alt="Glanbrook" id="Glanbrook" title="Glanbrook" href="#" shape="poly" coords="251,273,374,309,349,390,232,334,252,276" />
+                <area alt="Dundas" id="Dundas" title="Dundas" href="#" shape="poly" coords="196,238,226,222,238,220,244,219,245,212,251,210,253,202,262,198,278,209,277,214,269,213,268,220,252,223,246,230,244,235,240,231,227,238,223,237,216,232,217,238" />
+                <area alt="Hamilton" id="Hamilton" title="Hamilton" href="#" shape="poly" coords="243,238,244,240,250,240,253,258,256,262,254,269,311,287,315,275,320,272,338,266,342,252,354,255,358,239,350,239,326,200,330,223,324,215,308,211,304,221,288,215,278,220,271,214,268,222,257,223" />
+                <area alt="StoneyCreek" id="StoneyCreek" title="Stoney Creek" href="#" shape="poly" coords="360,241,354,258,343,254,341,268,330,272,317,276,314,288,402,317,422,254,418,253,404,256,384,248,372,247" />
+
+            </map>
+            <div id='myImage'  class="map">
+                <!--canvas size must be set in attributes and not in css-->
+                <canvas id="a"  height="494" width="494" style="border:1px solid red;" ></canvas>
+                <img id='TheImage' src="img/hamilton.png" alt="The Cities of Hamilton Region" usemap="#Map" />
+            </div>
+            <div id="info">
+                <h1></h1>
+                <h2></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/imagemapster.js"></script>
+
+        <script>
+            // since togle() event handler is not working, I found this alternative online (http://stackoverflow.com/questions/2459153/alternative-to-jquerys-toggle-method-that-supports-eventdata)
+            $.fn.clicktoggle = function (a, b) {
+                return this.each(function () {
+                    var clicked = false;
+                    $(this).click(function () {
+                        if (clicked) {
+                            clicked = false;
+                            return b.apply(this, arguments);
+                        }
+                        clicked = true;
+                        return a.apply(this, arguments);
+                    });
+                });
+            };
+             
+            
+            $('#TheImage').mapster({
+                stroke: true,
+                render_highlight: {
+                    strokeWidth: 2
+                },
+                singleSelect: true,
+                areas: [{
+                        key: 'somearea',
+                        stroke: false,
+                        render_select: {
+                            fillOpacity: 1
+                        }
+                    },
+                    {
+                        key: 'someotherarea',
+                        fill: false
+                    }]
+
+            });
+           //$("#info").hide();
+            $("area").clicktoggle(function () {
+                $("#info").find("h1").html($(this).attr("id") + ", Ontario");
+                $("#info").find("h2").html("Population: " + $array.length + ",000");
+                $("#info").show();
+            }, function () {
+                $("#info").hide();
+            });
+            
+
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                        function () {
+                            (b[l].q = b[l].q || []).push(arguments)
+                        });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = '//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>

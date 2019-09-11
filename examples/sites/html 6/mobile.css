@@ -1,0 +1,26 @@
+@media only screen and (max-width: 48em) 
+{
+    
+		body	
+			{
+				text-align:left;
+				font-size:75%;
+			}
+		figure,nav		
+			{
+				visibility: hidden;
+				position:absolute;
+			}
+   		ul
+			{
+				visibility:visible;
+				position:relative;
+				list-style-type:none;
+			}
+   		main
+			{
+				margin:0;
+				position:relative;
+				
+			}
+}

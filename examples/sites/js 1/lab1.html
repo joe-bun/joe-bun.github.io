@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+ StAuth10065: I Jobanpreet Singh Aulakh, 000381413 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.
+-->
+<html>
+    <head>
+        <title>Jobanpreet Singh Aulakh, 000381413</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table tr td{
+                text-align: center;
+                vertical-align: bottom;
+                background-color: whitesmoke;
+            }
+            #td1{
+                vertical-align: middle;
+            }
+        </style>
+        <script>
+            document.addEventListener("mousemove", isLoaded);
+            function isLoaded() {
+                document.getElementById("HTMLchart").onclick = function () {
+                    tableGenerator();
+                };
+                document.getElementById("Reset").onclick = function () {
+                    reset();
+                };
+                document.getElementById("image").onclick = function () {
+                    drawImage();
+                };
+            }
+            var letters;
+            var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+            var letterCounts = new Array(26);
+
+            var factor;
+            function tableGenerator() {
+                document.getElementById("table").innerHTML = "";
+                for (var i = 0; i < 26; i++) {
+                    letterCounts[i] = 0;
+                }
+                var text = document.getElementById("text").value;
+                text = text.toLowerCase();
+                letters = text.split("");
+                for (var i = 0; i < letters.length; i++) {
+                    for (var j = 0; j < alphabet.length; j++) {
+                        if (letters[i] === alphabet[j]) {
+                            letterCounts[j]++;
+                        }
+                    }
+                }
+                factor = 100 / (Math.max.apply(null, letterCounts));
+                var table = document.createElement("table");
+                for (var row = 0; row < 2; row++) {
+                    var tr = document.createElement("tr");
+                    for (var col = 0; col < 27; col++) {
+                        if (row === 0) {
+                            if (col === 0) {
+                                var td = document.createElement("td");
+                                tr.appendChild(td);
+                                td.id = "td1";
+                                td.innerHTML = "Letter<br>Frequency<br>100px";
+                            } else {
+                                var td = document.createElement("td");
+                                tr.appendChild(td);
+                                td.innerHTML = "<img src='./orange.gif' alt='" + letterCounts[col - 1].toString() + "' title='" + letterCounts[col - 1].toString() + "' height='" + (factor * letterCounts[col - 1]).toString() + "' width='1px'>";
+                            }
+                        } else {
+                            if (col === 0) {
+                                var td = document.createElement("td");
+                                tr.appendChild(td);
+                                td.innerText = "";
+                            } else {
+                                var td = document.createElement("td");
+                                tr.appendChild(td);
+                                td.innerHTML = alphabet[col - 1].toUpperCase();
+                            }
+                        }
+                    }
+                    table.appendChild(tr);
+                }
+                document.getElementById("table").appendChild(table);
+            }
+
+
+            function drawImage() {
+                document.getElementById("chart").innerHTML = "";
+                var chart = document.createElement("img");
+                var chartAddress = "http://chart.apis.google.com/chart?cht=bvs&chd=t:";
+                for (var i = 0; i < letterCounts.length; i++) {
+                    if (i === letterCounts.length - 1) {
+                        chartAddress += letterCounts[i] * factor;
+                    } else {
+                        chartAddress += letterCounts[i] * factor + ",";
+                    }
+                }
+                chartAddress += "&chs=750x100&chl=";
+                for (var i = 0; i < alphabet.length; i++) {
+                    if (i === alphabet.length - 1) {
+                        chartAddress += alphabet[i].toUpperCase();
+                    } else {
+                        chartAddress += alphabet[i].toUpperCase() + "|";
+                    }
+                }
+                chartAddress += "&chxt=y";
+                chart.setAttribute("src", chartAddress);
+                chart.setAttribute("alt", "Letter Frequency Bar Chart");
+                document.getElementById("chart").appendChild(chart);
+
+            }
+            function reset() {
+                document.getElementById("text").value = "The Quick Brown Fox Jumped Over the Lazy Dogs";
+                document.getElementById("table").innerHTML = "";
+                document.getElementById("chart").innerHTML = "";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            Comp10065 JavaScript Lab 1 - Letter Frequency Histogram
+        </h1>
+        <textarea rows="9" cols="40" id="text">The Quick Brown Fox Jumped Over the Lazy Dogs</textarea>
+        <br>
+        <input type="button" value="HTML Chart" id="HTMLchart" >
+        <input type="button" value="Reset Test Data" id="Reset" >
+        <input type="button" value="Image Chart" id="image" >
+        <br>
+        <div id="table"></div>
+        <br>
+        <div id="chart"></div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.no-js #JS{
+    visibility: visible;
+}
+.js #JS{
+    display: none;
+}
+h2{
+    margin-left: 4%;
+}
+.jumbotron{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+#btns{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

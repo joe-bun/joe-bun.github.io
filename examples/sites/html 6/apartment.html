@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<!--  Author: Jobanpreet Singh Aulakh, 000381413 --> 
+<html>
+<head>
+<title>
+Sandy and Leslie's apartment
+</title>
+<link rel="stylesheet" type="text/css" href="./apartment_layout.css">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px)" href="./mobile.css">
+</head>
+<body>
+<h1>
+Sandy and Leslie's apartment
+</h1>
+<figure>
+<figcaption>
+Click a room for a detailed view.
+</figcaption>
+<img src="./images/floor_plan.jpg" alt="Floor Plan" usemap="#map"/>
+<!--  I hand coded the image map. --> 
+<map name="map">
+  <area shape="rect" coords="421,21,550,137" alt="Bedroom" href="./bedroom.html">
+  <area shape="rect" coords="98,31,251,118" alt="Kitchen" href="./kitchen.html">
+  <area shape="poly" coords="33,124,22,251,254,250,254,214,274,194,201,120" alt="Living Room" href="./livingroom.html">
+  <area shape="rect" coords="393,146,568,249" alt="Detail veiw is not available." href="#">
+  <area shape="circle" coords="313,86,49" alt="Bathroom" href="./bathroom.html">
+  <area shape="default" alt="The Apartment" href="./apartment.html">
+</map>
+</figure>
+<nav>
+<p><a href="./apartment.html">Apartment</a> | <a href="./bedroom.html">Bedroom</a> | <a href="./bathroom.html">Bathroom</a> | <a href="./kitchen.html">Kitchen</a> | <a href="./livingroom.html">Living Room</a></p>
+</nav>
+<ul>
+<li><a href="./apartment.html">Apartment</a></li>
+<li><a href="./bedroom.html">Bedroom</a></li>
+<li><a href="./bathroom.html">Bathroom</a></li>
+<li><a href="./kitchen.html">Kitchen</a> </li>
+<li><a href="./livingroom.html">Living Room</a></li>
+</ul>
+<main>
+<form action="mailto:jobanaulakh@rocketmail.com" method="get">
+<h2>
+Rental Application: Please complete the form below
+</h2>
+<label for="fname">First Name</label> 
+<input type="text" id="fname" >
+<br>
+<label for="lname">Last Name</label>
+<input type="text" id="lname" >
+<br>
+<label for="mail">Email Addreess</label>
+<input type="text" id="mail" value="someone@somewhere.com" maxlength="80">
+<br>
+<label>Rental Date (starts the first day of the month):</label>
+<br>
+<label for="month">Month</label>
+<select id="month" name="month">
+    <option value="January">January
+    <option value="Febuary">Febuary
+    <option value="March">March
+    <option value="April">April
+	<option value="May">May
+	<option value="June">June
+	<option value="July">July
+	<option value="August">August
+	<option value="September">September
+	<option value="October">October
+	<option value="November">November
+	<option value="December">December
+</select>
+<label for="year">Year</label>
+<select id="year" name="year">
+  <option value="2013">2013
+  <option value="2014">2014
+  <option value="2015">2015
+</select>
+<br>
+<label>How did you hear about this apartment? Check any that apply:</label>
+<br>
+<input type="checkbox" name="hearfrom" value="newspaper">Newspaper
+<input type="checkbox" name="hearfrom" value="websearch">Web search
+<input type="checkbox" name="hearfrom" value="friend">Friend
+<br>
+<label>Method of payment for deposit:</label>
+<br>
+<input type="radio" name="payment" value="visa">Visa
+<input type="radio" name="payment" value="mastercard">MasterCard
+<input type="radio" name="payment" value="etransfer" checked="checked">eTransfer
+<br>
+<input type = "submit" value = "Submit" class = "button" />
+<input type = "reset" value = "Reset Form" class = "button" />
+</form>
+<table>
+<tr>
+<th>Service</th>	<th>Day/Hours</th>
+</tr>
+<tr>
+<td>Gym</td>	<td rowspan="2">Monday-Friday 6am - 10pm<br>Saturday 8am - 8pm<br>Sunday 8am - 5pm</td>
+</tr>
+<tr>
+<td>Pool</td>	
+</tr>
+<tr>
+<td>Laundry</td>	<td>24/7</td>
+</tr>
+<tr>
+<td class="lastrow" colspan="2">Please do not allow people you don't know to use these facilities.</td>
+</tr>
+
+</table>
+<p>Contact E-Mail: apartment@example.com</p>
+<embed src="./images/apartment.mp3" alt="Hello. Welcome to our apartment. You’ll really enjoy living here. The rooms are spacious and the apartment building amenities are fantastic. We look forward to hearing from you! ">
+<p>Transcript of the Audio above: Hello. Welcome to our apartment. You’ll really enjoy living here. The rooms are spacious and the apartment building amenities are fantastic. We look forward to hearing from you! </p>
+</main>
+</body>
+</html>

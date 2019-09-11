@@ -1,0 +1,46 @@
+@media screen and (max-width:360px){
+    body{
+        width: auto;
+    }
+    #colAd{
+        display: none;
+    }
+    #colSidebar{
+        float:none;
+    }
+    #footer{
+        font-size:larger;
+    }
+    #menu{
+        width:auto;
+        height:auto;
+        background: none; 
+        background-color: darkolivegreen;
+        font-weight: bold;
+    }
+    #menu li{
+        display: list-item;
+    }
+    #menu a{
+        float:none;
+    }
+    #menu a:hover,#menu .active a{
+        background:none; 
+        font-size: large;
+    }
+    #header{
+        width: auto; 
+        height:100px;
+    }
+    #header *{
+        font-weight:bold;
+        text-transform: lowercase;
+    }
+    #header h1{float:left;font-size:2em;padding:40px 0 0 10px;}
+
+    h2{
+        text-decoration: underline;
+        -moz-text-decoration-color: red; /* Code for Firefox */
+        text-decoration-color: red;
+    }
+}

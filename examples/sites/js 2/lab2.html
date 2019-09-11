@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--
+StAuth10065: I Jobanpreet Singh Aulakh, 000381413 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.
+-->
+<html>
+    <head>
+        <title>Jobanpreet Singh Aulakh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <style>
+            h1{
+                color: green;
+            }
+            #error{
+                color: red;
+                margin-left: 4%;
+            } 
+            ol{
+                list-style: none;
+                color: red;
+            }
+            form table{
+                border: 1px solid white;
+                width: 54%;
+                margin-left: 1%;
+                margin-bottom: 1em;
+            }
+            form table tr{
+                height: 4.5em;
+            }
+            form table td{
+                background-color: lightgray;
+            }
+            form table td.col1{
+                color: white;
+                background-color: green;
+                width:12%;
+                text-align: center;
+            }
+            form table td.col2{
+                vertical-align: top;
+                width: 38%;
+            }
+            form table tr td input{
+                font-size: 2em;
+                margin-top: 0.4em;
+                border: 5px solid white;
+                background-color: whitesmoke;
+                width:96%;
+            }
+            p.success{
+                color: green;
+                border: 1px solid green;
+                padding-top: 2em;
+                padding-bottom: 2em;
+                padding-left: 1em;
+                padding-right: 1em;
+                width: 30%;
+                margin-left: 1%;
+            }
+            div.fail{
+                border: 1px solid gray;
+                margin-left:1%;
+                width: 20%;
+            }
+            #red, td.error{
+                color:red;
+            }
+            table{
+                border: 1px solid white;
+                margin-left: 1%;
+                margin-bottom: 1em;
+                width: auto;
+            }
+            table td{
+                background-color: lightgray;
+                border: 1px solid lightgray;
+                height: auto;
+                padding: 0.1em;
+            }
+            table th{
+                background-color: green;
+                color: white;
+                text-align: center;
+                border: 1px solid lightgray;
+                height: auto;
+                width: auto;
+            }
+        </style>
+        <script>
+            $(document).ready(function () {
+                var allTxtBox = $("input[type=text]");
+                var empty = true;
+                for (var i = 0; i < allTxtBox.length; i++) {
+                    if (!(allTxtBox[i].value === "")) {
+                        empty = false;
+                    }
+                }
+                if (empty) {
+                    document.getElementById("error").innerText = "Please fill in something. All fields are blank.";
+                }
+            });
+            function gate() {
+                document.getElementById("error").innerHTML = "";
+                var flag = false;
+                var errors = [];
+                var patt = /^(Mr\.|Mrs\.) +[a-zA-Z]+ +[a-zA-Z]+$/;
+                if (patt.test($.trim(document.getElementById("uname").value)) === false) {
+                    if (document.getElementById("uname").value === "") {
+                        errors['uname'] = "Name is blank. Please fill it in.";
+                    } else {
+                        errors['uname'] = "Name format error. Ex: Mr. John Smith";
+                    }
+                }
+                patt = /^[0-9]{2,3} +[a-zA-Z]+ +(Road|Street)+$/;
+                if (!patt.test($.trim(document.getElementById("street").value))) {
+                    if (document.getElementById("street").value === "") {
+                        errors['street'] = "Street is blank. Please fill it in.";
+                    } else {
+                        errors['street'] = "Street format error. Ex: 123 Anywhere Road";
+                    }
+                }
+                patt = /^[d-wD-W][d-wD-W][1-9][ -]?[d-wD-W][1-9][1-9]$/i;
+                if (!patt.test($.trim(document.getElementById("postalcode").value))) {
+                    if (document.getElementById("postalcode").value === "") {
+                        errors['postalcode'] = "Postal Code is blank. Please fill it in.";
+                    } else {
+                        errors['postalcode'] = "Postal Code format error. Ex: LL2 M23";
+                    }
+                }
+                patt = /^\(?\d{3}\)?[ ._]?\d{3}[ ._]?\d{4}$/;
+                if (!patt.test($.trim(document.getElementById("phone").value))) {
+                    if (document.getElementById("phone").value === "") {
+                        errors['phone'] = "Phone is blank. Please fill it in.";
+                    } else {
+                        errors['phone'] = "Phone format error. (905) 575 1212";
+                    }
+                }
+                patt = /^\w{4,10}\.\w{4,10}@mohawkcollege\.(com|ca|org)$/;
+                if (!patt.test($.trim(document.getElementById("email").value))) {
+                    if (document.getElementById("email").value === "") {
+                        errors['email'] = "Email is blank. Please fill it in.";
+                    } else {
+                        errors['email'] = "Email format error. Ex: abcd@abcd.com";
+                    }
+                }
+                var allTxtBox = $("input[type=text]");
+                var empty = true;
+                for (var i = 0; i < allTxtBox.length; i++) {
+                    if (!(allTxtBox[i].value === "")) {
+                        empty = false;
+                    }
+                }
+                if (empty) {
+                    document.getElementById("error").innerText = "Please fill in something. All fields are blank.";
+                } else if (Object.keys(errors).length !== 0) {
+                    var ol = document.createElement("OL");
+                    for (var key in errors) {
+                        var li = document.createElement("LI");
+                        li.innerHTML = errors[key];
+                        ol.appendChild(li);
+                    }
+                    flag = false;
+                    document.getElementById("error").appendChild(ol);
+                } else {
+                    alert("Got your info -- now the form will be submitted.");
+                    flag = true;
+                }
+                return flag;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Form Validation with Reg Expressions and CSV</h1>
+        <div id="error"></div>       
+        <form onsubmit="return gate();" action="https://csunix.mohawkcollege.ca/tooltime/echo.php" method="post">
+            <table>
+                <tr>
+                    <td class="col1">
+                        <Label>
+                            Full Name:
+                        </Label>                        
+                    </td>
+                    <td class="col2">
+                        <Label>
+                            <input id="uname" name="uname" type="text" value="">
+                        </Label>                        
+                    </td>
+                    <td>
+                        <Label>
+                            Salutation of Mr. or Mrs. followed by two text strings separated by any number of spaces.
+                        </Label>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">
+                        <Label>
+                            Street:
+                        </Label>                        
+                    </td>
+                    <td class="col2">
+                        <Label>
+                            <input id="street" name="street" type="text" value="">
+                        </Label>                        
+                    </td>
+                    <td>
+                        <Label>
+                            2 or 3 digit number followed by a text string ending with Street or Road separated by any number of spaces.
+                        </Label>                        
+                    </td>
+                </tr> 
+                <tr>
+                    <td class="col1">
+                        <Label>
+                            PostalCode:
+                        </Label>                        
+                    </td>
+                    <td class="col2">
+                        <Label>
+                            <input id="postalcode" name="postalcode" type="text" value="">
+                        </Label>                        
+                    </td>
+                    <td>
+                        <Label>
+                            Char Char Digit optional Hyphen or space Char Digit Digit (abclxyz and number 0 not allowed. Case insensitive. )
+                        </Label>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">
+                        <Label>
+                            Phone:
+                        </Label>                        
+                    </td>
+                    <td class="col2">
+                        <Label>
+                            <input id="phone" name="phone" type="text" value="">
+                        </Label>                        
+                    </td>
+                    <td>
+                        <Label>
+                            10 digits, first 3 digits have optional parentheses, either side of digits 456 are optional space, dot or hyphen.
+                        </Label>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">
+                        <Label>
+                            Email:
+                        </Label>                        
+                    </td>
+                    <td class="col2">
+                        <Label>
+                            <input id="email" name="email" type="text" value="">
+                        </Label>                        
+                    </td>
+                    <td>
+                        <Label>
+                            firstname.lastname@mohawkcollege.domain (firstname and lastname must be 4-10 characters in length, domain may be either .com, .ca or .org)
+                        </Label>                        
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit me now!!!">
+        </form>
+    </body>
+</html>

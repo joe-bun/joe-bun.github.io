@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--  Author: Jobanpreet Singh Aulakh, 000381413 --> 
+<html>
+<head>
+<title>
+Sandy and Leslie's apartment
+</title>
+<link rel="stylesheet" type="text/css" href="./apartment_layout.css">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px)" href="./mobile.css">
+</head>
+<body>
+<h1>
+Sandy and Leslie's apartment
+</h1>
+<figure>
+<figcaption>
+Click a room for a detailed view.
+</figcaption>
+<img src="./images/floor_plan.jpg" alt="Floor Plan" usemap="#map"/>
+<!--  I hand coded the image map. --> 
+<map name="map">
+  <area shape="rect" coords="421,21,550,137" alt="Bedroom" href="./bedroom.html">
+  <area shape="rect" coords="98,31,251,118" alt="Kitchen" href="./kitchen.html">
+  <area shape="poly" coords="33,124,22,251,254,250,254,214,274,194,201,120" alt="Living Room" href="./livingroom.html">
+  <area shape="rect" coords="393,146,568,249" alt="Detail veiw is not available." href="#">
+  <area shape="circle" coords="313,86,49" alt="Bathroom" href="./bathroom.html">
+  <area shape="default" alt="The Apartment" href="./apartment.html">
+</map>
+</figure>
+<nav>
+<p><a href="./apartment.html">Apartment</a> | <a href="./bedroom.html">Bedroom</a> | <a href="./bathroom.html">Bathroom</a> | <a href="./kitchen.html">Kitchen</a> | <a href="./livingroom.html">Living Room</a></p>
+</nav>
+<ul>
+<li><a href="./apartment.html">Apartment</a></li>
+<li><a href="./bedroom.html">Bedroom</a></li>
+<li><a href="./bathroom.html">Bathroom</a></li>
+<li><a href="./kitchen.html">Kitchen</a> </li>
+<li><a href="./livingroom.html">Living Room</a></li>
+</ul>
+<h2>
+Bathroom Detail
+</h2>
+<img src="./images/bathroom_lg.jpg" alt="Bathroom Detail Image" />
+</body>
+</html>

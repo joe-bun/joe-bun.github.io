@@ -1,0 +1,68 @@
+/*
+StAuth10065: I Jobanpreet Singh Aulakh, 000381413 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.
+*/
+/* 
+    Created on : Dec 3, 2016, 2:02:08 PM
+    Author     : Joban Aulakh
+*/
+#main{
+    width: 350px;;
+}
+#title,#price{
+    background-color: navy;
+    color: yellow;
+    margin-bottom: 20px;
+    font-size: 1.7em;
+    padding: 5px;
+}
+#image{
+    cursor: help;
+}
+#title{
+    text-align: center;
+}
+#description{
+    border: 1px solid lightgray;
+    padding: 5px;
+    font-style: italic;
+    margin-top: 30px;
+    position: absolute;
+    width: 350px;
+}
+#previous{
+    margin-left: 0%;
+}
+#next{
+    margin-left: 301px;
+}
+#next,#previous{
+    margin-top: 5px;
+}
+#next_blue,#next_red,#previous_blue,#previous_red{
+    position: absolute;
+    cursor: pointer;
+}
+.over{
+    visibility:hidden;
+}
+table{
+    width: 430px;
+    border: 2px solid yellow;
+    border-collapse: collapse;
+}
+td img{
+    height: 50px;
+}
+td{               
+    border: 2px solid yellow;
+    vertical-align: bottom;
+    padding: 2px;
+}
+#SummaryTitle{
+    width: 420px;
+    background-color: navy;
+    color: yellow;
+    font-size: 1.7em;
+    padding: 5px;
+    text-align: center;
+}
