@@ -13,32 +13,32 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 .stack {
-  float: left;
-  width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */
-  padding: 5px; /* if you want space between the images */
+    float: left;
+    width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */
+    padding: 5px; /* if you want space between the images */
 }
 .main-body{
-/*display: inline-block;*/
+    /*display: inline-block;*/
 }
 .pp {
-width:30%; 
-                text-align:center; 
-             
- 
+    width:30%; 
+    text-align:center; 
+
+
     box-shadow:0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 
 }
 .pp img {
-border-radius: 50%;
-padding: 7px;
-max-width: 80%;
-Height: auto;
+    border-radius: 50%;
+    padding: 7px;
+    max-width: 80%;
+    Height: auto;
 
 }
 .intro {
-width: 60%;
+    width: 60%;
 
-box-shadow:0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow:0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 a {
     text-decoration: none;
