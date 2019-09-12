@@ -13,7 +13,7 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 .main-body{
-display: inline;
+display: inline-block;
 }
 .pp {
 width:30%; 
