@@ -12,8 +12,13 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+.stack {
+  float: left;
+  width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */
+  padding: 5px; /* if you want space between the images */
+}
 .main-body{
-display: inline-block;
+/*display: inline-block;*/
 }
 .pp {
 width:30%; 
