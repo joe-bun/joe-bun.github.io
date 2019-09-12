@@ -13,7 +13,7 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 .pp {
-width:auto; 
+width:40%; 
                 text-align:center; 
                 padding:20px;
  
@@ -23,7 +23,7 @@ width:auto;
 border-radius: 50%;
 padding: 20px;
 max-width: 10%;
-Height: 10px;
+Height: auto;
 
 }
 a {
